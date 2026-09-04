@@ -4,15 +4,21 @@
 This is just for infotainment purpose
 disclaimer
 
+#this is function defination
+function is_loyal() {
 read -p "Enter the bandi: " bandi
 read -p "Enter pyaar %" pyaar
 
 if [[ $bandi == "Daya bhabhi" ]];
 then
-	echo "Jethiyo is loyal"
+	echo "$1 is loyal"
 elif [[ $pyaar -ge 100 ]];
 then
-	echo "Jetha is loyal"
+	echo "$1 is loyal"
 else
-	echo "Jethiyo is not loyal"
+	echo "$1 is not loyal"
 fi
+}
+
+#this is function call
+is_loyal "Metus"
