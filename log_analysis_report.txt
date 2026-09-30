@@ -1,0 +1,98 @@
+=================== Analysing log files ====================
+
+List of log files updated within last 24 hours
+/mnt/c/Users/Rishi/logs/application.log
+/mnt/c/Users/Rishi/logs/security.log
+/mnt/c/Users/Rishi/logs/server.log
+
+
+===============================================
+===/mnt/c/Users/Rishi/logs/application.log===
+===============================================
+
+Searching ERROR logs in /mnt/c/Users/Rishi/logs/application.log file
+2026-09-30 00:05:27 ERROR app=web-api host=app01 request_id=7f31a9 event=DB_QUERY_FAILED database=orders_db query=order_summary error="connection reset by peer"
+2026-09-30 00:12:46 ERROR app=worker host=app01 pid=1921 event=JOB_FAILED queue=reports job_id=88219 error="upstream timeout" retry=1
+2026-09-30 00:20:11 ERROR app=web-api host=app01 request_id=7f31af method=POST path=/api/payment status=502 duration_ms=3021 provider=payment-gateway error="upstream unavailable"
+2026-09-30 00:29:40 ERROR app=web-api host=app01 event=UNHANDLED_EXCEPTION type=NullPointerException component=OrderService line=418
+2026-09-30 00:47:31 ERROR app=worker host=app01 event=EMAIL_DELIVERY_FAILED job_id=88244 recipient=user@example.test reason="SMTP 451 temporary failure"
+
+Number of ERROR logs found in /mnt/c/Users/Rishi/logs/application.log file
+5
+
+Searching WARN logs in /mnt/c/Users/Rishi/logs/application.log file
+2026-09-30 00:02:11 WARN  app=web-api host=app01 request_id=7f31a4 event=AUTH_FAILURE user=bob reason=invalid_password
+2026-09-30 00:04:02 WARN  app=web-api host=app01 event=SLOW_REQUEST path=/api/reports/sales duration_ms=1842 threshold_ms=1000
+2026-09-30 00:07:44 WARN  app=web-api host=app01 event=MEMORY_USAGE heap_used_mb=1430 heap_max_mb=2048 usage_percent=69
+2026-09-30 00:10:33 WARN  app=web-api host=app01 event=RATE_LIMIT user=guest ip=192.0.2.44 limit=100 window_seconds=60
+2026-09-30 00:15:48 WARN  app=web-api host=app01 event=TLS_CERT_EXPIRING days_remaining=21 certificate=api.example.test
+2026-09-30 00:23:08 WARN  app=web-api host=app01 event=DISK_USAGE mount=/var usage_percent=82 threshold_percent=80
+2026-09-30 00:34:27 WARN  app=worker host=app01 event=QUEUE_DEPTH queue=reports depth=127 threshold=100
+2026-09-30 00:42:16 WARN  app=web-api host=app01 event=AUTH_FAILURE_BURST user=unknown failures=7 window_seconds=60 source=192.0.2.55
+2026-09-30 00:55:44 WARN  app=web-api host=app01 event=REQUEST_TIMEOUT path=/api/export duration_ms=30001 timeout_ms=30000 user=manager
+
+Number of WARN logs found in /mnt/c/Users/Rishi/logs/application.log file
+9
+
+Searching CRITICAL logs in /mnt/c/Users/Rishi/logs/application.log file
+
+Number of CRITICAL logs found in /mnt/c/Users/Rishi/logs/application.log file
+0
+
+
+===============================================
+===/mnt/c/Users/Rishi/logs/security.log===
+===============================================
+
+Searching ERROR logs in /mnt/c/Users/Rishi/logs/security.log file
+2026-09-30 10:07:45 ERROR account_lockout_failed user=admin
+2026-09-30 10:22:16 ERROR unauthorized_access resource=/etc/app/config
+2026-09-30 10:35:29 ERROR invalid_api_token client=mobile-app
+
+Number of ERROR logs found in /mnt/c/Users/Rishi/logs/security.log file
+3
+
+Searching WARN logs in /mnt/c/Users/Rishi/logs/security.log file
+2026-09-30 10:04:27 WARN failed_login_attempt user=admin source=192.0.2.55
+2026-09-30 10:18:51 WARN suspicious_request path=/admin source=192.0.2.88
+2026-09-30 10:31:08 WARN expired_session user=dave
+2026-09-30 10:48:37 WARN blocked_request count=17 source=192.0.2.77
+
+Number of WARN logs found in /mnt/c/Users/Rishi/logs/security.log file
+4
+
+Searching CRITICAL logs in /mnt/c/Users/Rishi/logs/security.log file
+2026-09-30 10:14:33 CRITICAL multiple_failed_logins source=192.0.2.55 attempts=25
+2026-09-30 10:39:55 CRITICAL security_policy_violation rule=AUTH-004 source=192.0.2.91
+
+Number of CRITICAL logs found in /mnt/c/Users/Rishi/logs/security.log file
+2
+
+
+===============================================
+===/mnt/c/Users/Rishi/logs/server.log===
+===============================================
+
+Searching ERROR logs in /mnt/c/Users/Rishi/logs/server.log file
+2026-09-30 09:12:49 ERROR upstream_service_timeout service=users
+2026-09-30 09:30:18 ERROR request_failed status=500 endpoint=/api/orders
+2026-09-30 09:44:03 ERROR redis_connection_failed host=redis01
+
+Number of ERROR logs found in /mnt/c/Users/Rishi/logs/server.log file
+3
+
+Searching WARN logs in /mnt/c/Users/Rishi/logs/server.log file
+2026-09-30 09:08:37 WARN connection_pool_near_limit active=92 max=100
+2026-09-30 09:25:46 WARN high_latency endpoint=/reports duration_ms=3210
+2026-09-30 09:39:27 WARN queue_depth_high queue=reports depth=145
+2026-09-30 09:57:16 WARN retry_queue_growing size=83
+
+Number of WARN logs found in /mnt/c/Users/Rishi/logs/server.log file
+4
+
+Searching CRITICAL logs in /mnt/c/Users/Rishi/logs/server.log file
+2026-09-30 09:21:33 CRITICAL server disk space critically low free_percent=4
+2026-09-30 09:53:48 CRITICAL worker_process_crashed pid=4412
+
+Number of CRITICAL logs found in /mnt/c/Users/Rishi/logs/server.log file
+2

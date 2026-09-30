@@ -1,0 +1,10 @@
+2026-09-30 09:00:04 INFO server listening port=8080
+2026-09-30 09:08:37 WARN connection_pool_near_limit active=92 max=100
+2026-09-30 09:12:49 ERROR upstream_service_timeout service=users
+2026-09-30 09:21:33 CRITICAL server disk space critically low free_percent=4
+2026-09-30 09:25:46 WARN high_latency endpoint=/reports duration_ms=3210
+2026-09-30 09:30:18 ERROR request_failed status=500 endpoint=/api/orders
+2026-09-30 09:39:27 WARN queue_depth_high queue=reports depth=145
+2026-09-30 09:44:03 ERROR redis_connection_failed host=redis01
+2026-09-30 09:53:48 CRITICAL worker_process_crashed pid=4412
+2026-09-30 09:57:16 WARN retry_queue_growing size=83

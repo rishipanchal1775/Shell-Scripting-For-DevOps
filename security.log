@@ -1,0 +1,10 @@
+2026-09-30 10:01:13 INFO login_success user=alice source=192.0.2.10
+2026-09-30 10:04:27 WARN failed_login_attempt user=admin source=192.0.2.55
+2026-09-30 10:07:45 ERROR account_lockout_failed user=admin
+2026-09-30 10:14:33 CRITICAL multiple_failed_logins source=192.0.2.55 attempts=25
+2026-09-30 10:18:51 WARN suspicious_request path=/admin source=192.0.2.88
+2026-09-30 10:22:16 ERROR unauthorized_access resource=/etc/app/config
+2026-09-30 10:31:08 WARN expired_session user=dave
+2026-09-30 10:35:29 ERROR invalid_api_token client=mobile-app
+2026-09-30 10:39:55 CRITICAL security_policy_violation rule=AUTH-004 source=192.0.2.91
+2026-09-30 10:48:37 WARN blocked_request count=17 source=192.0.2.77
